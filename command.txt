@@ -1,0 +1,20 @@
+git config --global user.name "mocaibpt"
+git config --global user.email "mocai@bupt.edu.cn"
+git init   :初始化GIT仓库
+vi readme.txt    
+
+git add readme.txt 
+git commit -m <message>
+
+git status  :查看仓库当前状态
+git diff <file>    :查看文件改变部分
+
+git log     :查看从最近到最远的提交日志
+git log --pretty=oneline    :一行显示提交日志
+
+git reset --hard HEAD^
+git reset --hard HEAD^^
+git reset --hard HEAD~100
+git reset --hard 1094a  ；回滚至commit id为1094a的版本
+
+git reflog  :查看每次命令
