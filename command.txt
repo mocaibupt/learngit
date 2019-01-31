@@ -18,3 +18,5 @@ git reset --hard HEAD~100
 git reset --hard 1094a  ；回滚至commit id为1094a的版本
 
 git reflog  :查看每次命令
+
+git checkout -- <file>  :将文件返回到最近一次git commit或git add时的状态
