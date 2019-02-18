@@ -21,7 +21,29 @@ git reflog  :查看每次命令
 
 git checkout -- <file>  :将文件返回到最近一次git commit或git add时的状态
 
-git remoe add origin git@github.com:maichaelliao/learngit.git
-machaelliao为自己Git账户
+创建私钥和公钥：
+1.在机主目录下，C/user/name运行命令
+	ssh-keygen -t rsa -C "youremail@example.com"
+		创建SSH Key。其中.ssh目录下的id_rsa为私钥，id_rsa.pub是公钥
+2.然后，登录Github，打开“Account settings”，“SSH Keys”界面
+3.点“Add SSH Key",填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
 
-git push -u origin master:把当前分支推送至远程
+创建远程仓库：
+1.Create a new repository,输入名称
+2.在本地仓库目录下运行命令：
+	git remoe add origin git@github.com:maichaelliao/learngit.git
+	machaelliao为自己Git账户
+3.推送本地库所有内容到远程库上：
+	git push -u origin master:把当前分支推送至远程
+	-u会将本地master分支和远程的master分支关联起来
+4.后续提交至远程库只需：
+	git push origin master
+
+git checkout -b <name>dev	:Switched to a new branch 'dev'
+git branch <name>dev		:Create a new branch 'dev'
+git checkout <name>dev		:Switched to branch 'dev'
+
+git branch			:查看分支
+git branch -d <name>dev		:Delete the branch 'dev'
+
+git merge <name>dev		:合并某分支到当前分支
