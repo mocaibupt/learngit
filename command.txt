@@ -20,3 +20,8 @@ git reset --hard 1094a  ；回滚至commit id为1094a的版本
 git reflog  :查看每次命令
 
 git checkout -- <file>  :将文件返回到最近一次git commit或git add时的状态
+
+git remoe add origin git@github.com:maichaelliao/learngit.git
+machaelliao为自己Git账户
+
+git push -u origin master:把当前分支推送至远程
